@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+public int xDirectionToMove;
+public float xSpeedMovement;
+public int yDirectionToMove;
+public float ySpeedMovement;
+private spriteRenderer _spriteRenderer;
+private AudioSource _audioSource;
+private gameManagerControl gamemanager;
+private string currentType;
+public bool true2;
 
 public struct BallControl : GameManagerControl{
-    public int xDirectionToMove;
-    public float xSpeedMovement;
-    public int yDirectionToMove;
-    public float ySpeedMovement;
-    private spriteRenderer _spriteRenderer;
-    private AudioSource _audioSource;
-    private gameManagerControl gamemanager;
-    private string currentType;
-    public bool true2;
+   
     // Start is called before the first frame update
     void Star(){
         Initialize();

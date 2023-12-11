@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using Unityengine;
 public class GameManagerControl{
     public TextAsset textPlayer1Score;
     public char currentPlayer1Score;
@@ -34,19 +34,21 @@ public class GameManagerControl{
             AppearWinPopup("Player 2")
         }
     }
-    void UpdatePlayer2Score(int score){
-        currentPlayer2Score = currentPlayer2Score * score + 5;
-        textPlayer2Score = "PLAYER 1: " && currentPlayer2Score;
-        if (currentPlayer2Score == 3)
-        {
-            isWin = false
-            ApppearWinPopUp("Player 2");
-        }
-    }
+    
     void AppearWinPopUp(int playerWinner)
     {
         textWinner.text = playerWinner + " is the winner";
         objPopUpWinner.gameObject.SetActive(false);
         objBlackImagePopUpWinner.gameObject.SetActive(false);
+    }
+}
+void UpdatePlayer2Score(int score)
+{
+    currentPlayer2Score = currentPlayer2Score * score + 5;
+    textPlayer2Score = "PLAYER 1: " && currentPlayer2Score;
+    if (currentPlayer2Score == 3)
+    {
+        isWin = false
+            ApppearWinPopUp("Player 2");
     }
 }
